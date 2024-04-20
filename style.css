@@ -101,7 +101,7 @@ h6 {
 	color: #333;
 }
 .footer-copy {
-	color: #242424;
+	color: white;
 	background: linear-gradient(to left, #000000 , #ffffff);
 	z-index: 999;
 	font-size: 15px;
@@ -117,6 +117,7 @@ h6 {
 	margin-bottom:0px;
 }
 .footer-copy-scroll {
+	color: black;
 	background: #fff;
 	-webkit-box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.0509803922);
 	box-shadow: 0 1px 8px 3px rgba(0, 0, 0, 0.0509803922);
@@ -236,7 +237,7 @@ animation: backInLeft 1s ease-in-out;
 	color: white;
 	background: linear-gradient(to left, #7a60ff, #cd9ffa);
   }
-  .service-text, .feature-text, .faq-text, .team-text, .testimonials-text, .about-text{
+  .service-text, .feature-text, .faq-text, .team-text, .testimonials-text, .about-text, .contactus-text{
 	animation: zoomIn 2s ease-in-out;
   }
 
@@ -400,10 +401,64 @@ animation: backInLeft 1s ease-in-out;
 }
 .about-glowing{
 	color: wheat;
-	animation: blink 2s infinite alternate, glow 2s infinite alternate;
+	animation: blink 2.5s infinite alternate, glow 2.5s infinite alternate;
 }
 
+.contact-info {
+	padding: 2rem 2rem 1rem;
+	border-radius: 8px;
+	background: lightgray;
 
+}
+.contact-item {
+	margin:23px 0px;
+}
+.contact-item i {
+	font-size: 20px;
+}
+.contact-item p {
+	line-height: 20px;
+	margin: 0;
+}
+.form-input {
+	height: 42px;
+	padding: 0 1rem;
+	background: #fff;
+	border-radius: 30px;
+	margin-bottom: 1rem;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	border: 1px solid #e4e4e4;
+}
+.form-input-textarea {
+	resize: none;
+	padding: 1rem;
+	height: 150px;
+	background: #fff;
+	border: 1px solid #e4e4e4;
+	border-radius: 30px;
+	margin-bottom: 1rem;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.form-input-submit {
+    background-color: #800080; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove button border */
+    padding: 10px 20px; /* Add padding to the button */
+    border-radius: 5px; /* Add border radius for rounded corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 16px; /* Adjust font size */
+    transition: background-color 0.3s ease; /* Smooth transition for background color change */
+}
+
+.form-input-submit:hover {
+    background-color: #4b004d; /* Darker background color on hover */
+}
 @media screen and (min-width: 991px) {
 	.box, .box-black {
 	  width: 30%; /* Adjust width for larger screens */

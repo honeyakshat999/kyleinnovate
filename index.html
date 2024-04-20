@@ -384,23 +384,115 @@
 </section>
 <!-------About End-------> 
 
+<!-------Contact Start------->
+<section class="contact section-padding bg-white" id="section-7">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="text-center contactus-text">
+          <h3 class="purple">Contact us</h3>
+          <span class="line"></span>
+          <p>Don't hesitate to reach out to us. We welcome your inquiries and are here to assist you. Feel free to contact us at any time, and we'll be happy to provide the support and information you need.</p>
+        </div>
+        <br />
+        <div class="section-content">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8">
+                <form id="contact_form" action="https://formspree.io/f/xnqeorvz" method="post">
+                  <div class="row">
+                    <div class="col">
+                      <label for="fullname">Full Name</label>
+                      <input type="text" id="fullname" class="form-input w-100 rounded" name="full-name" required>
+                    </div>
+                    <div class="col">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" class="form-input w-100 rounded" name="email" required>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <label for="subject">Subject</label>
+                      <select class="form-control rounded" id="subject" required>
+                        <option value="enquiry" selected>Enquiry</option>
+                        <option value="feedback">Feedback</option>
+                        <option value="support">Support</option>
+                        <option value="emergency">Emergency Support</option>
+                        <option value="request">Request</option>
+                        <option value="service">Service</option>
+                        <option value="other">Other</option>
+                      </select>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="row">
+                    <div class="col">
+                      <label for="message">Message</label>
+                      <textarea class="form-input-textarea w-100 rounded" id="message" name="message" required></textarea>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <button class="form-input-submit" type="submit" name="button">Submit</button>
+                    </div>
+                  </div>
+                </form>
+              </div>                        
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="contact-info black">
+                <div class="contact-item"> <i class="fa fa-map-marker-alt media-left media-right-margin"></i>
+                  <div class="media-body">
+                    <p class="text-uppercase">Address</p>
+                    <p class="text-uppercase">Jaipur, India</p>
+                  </div>
+                </div>
+                <div class="contact-item"> <i class="fa fa-mobile media-left media-right-margin"></i>
+                  <div class="media-body">
+                    <p class="text-uppercase">Phone</p>
+                    <p class="text-uppercase"><a class="text-black" href="tel:+917339754521">7339754521</a> </p>
+                  </div>
+                </div>
+                <div class="contact-item"> <i class="fa fa-envelope media-left media-right-margin"></i>
+                  <div class="media-body">
+                    <p class="text-uppercase">E-mail</p>
+                    <p class="text-uppercase"><a class="text-black" href="mailto:honeyakshat999@gmail.com">honeyakshat999@gmail.com</a> </p>
+                  </div>
+                </div>
+                <div class="contact-item"> <i class="fa fa-clock media-left media-right-margin"></i>
+                  <div class="media-body">
+                    <p class="text-uppercase">Working Hours</p>
+                    <p class="text-uppercase">Mon-Fri 9.00 AM to 6.00PM.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<br />
+<br />
+<br />
+<!-------Contact End-------> 
+
 <!------Footer Start----->
 <footer class="footer-copy" id = "footer">
   <div class="container-fluid">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-auto">
-          <a href="#" target="_blank"><span class="fab fa-linkedin fa-lg" aria-hidden="true"></span></a>
+          <a href="#" target="_self"><span class="fab fa-linkedin fa-lg" aria-hidden="true"></span></a>
         </div>
         <div class="col-auto">
-          <a href="#" target="_blank"><span class="fab fa-instagram fa-lg" aria-hidden="true"></span></a>
+          <a href="#" target="_self"><span class="fab fa-instagram fa-lg" aria-hidden="true"></span></a>
         </div>
       </div>
     </div>
 
     <div class="col-md-12">
       <p>2024 &copy; KyleInnovate.</p>
-      <p>Website Designed With ❤️ By <a href="#" target="_self" rel="dofollow">KyleInnovate</a></p>
+      <p>Website Designed With ❤️ By <a href="#" target="_self" rel="dofollow" onclick="reloadPage()">KyleInnovate</a></p>
     </div>
   </div>
 </div>
