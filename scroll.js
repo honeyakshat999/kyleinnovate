@@ -16,31 +16,14 @@ window.addEventListener("scroll", function() {
 window.addEventListener("DOMContentLoaded", function() {
     showSlides();
 });
-
-window.addEventListener("load", function(){
-const container = document.getElementById('section-0');
-const numParticles = 250; // Adjust number of particles
-
-container.classList.add("section-begin");
-for (let j = 0; j < numParticles; j++) {
-    const particle = document.createElement('span');
-    particle.className = 'particle';
-    particle.textContent = Math.random() < 0.5 ? '0' : '1'; // Randomly set content to '0' or '1'
-    particle.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
-    particle.style.top = Math.random() * 100 + 'vh'; // Random vertical position
-    particle.style.animationDelay = Math.random() * 2 + 's'; // Random delay for staggered animation start
-    container.appendChild(particle);
-}
-});
-    
     
 function reloadPage() {
     window.location.reload();
 }
 
 function toggleNavbar() {
-    var navbarNav = document.querySelector('.navbar-nav');
-    navbarNav.classList.toggle('active');
+    var navbarCollapse = document.getElementById("navbarSupportedContent");
+    navbarCollapse.classList.toggle("collapsed"); // Toggle the collapsed class
 }
 
 function expandqna(element){
@@ -83,28 +66,28 @@ function scrollToSection(sectionId, link) {
     
 function showSlides() {
     var i;
-    var slides = document.getElementsByClassName("testimonial");
+    var slides = document.getElementsByClassName("testimonial-item");
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1 }
     slides[slideIndex - 1].style.display = "block";
-    slideTimer = setTimeout(showSlides, 8000); // Change slide every 8 seconds
+    slideTimer = setTimeout(showSlides, 5000); // Change slide every 8 seconds
 }
 
 
 function plusSlides(n) {
     clearTimeout(slideTimer); // Clear the existing timeout
     slideIndex += n;
-    var slides = document.getElementsByClassName("testimonial");
+    var slides = document.getElementsByClassName("testimonial-item");
     if (slideIndex > slides.length) { slideIndex = 1 }
     if (slideIndex < 1) { slideIndex = slides.length }
     for (var i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slides[slideIndex - 1].style.display = "block";
-    slideTimer = setTimeout(showSlides, 8000); // Reset the timeout after clicking a button
+    slideTimer = setTimeout(showSlides, 5000); // Reset the timeout after clicking a button
 }
 
 
@@ -144,5 +127,4 @@ function plusSlides(n) {
             }
         }
       }
-    });
-    */
+    });*/
