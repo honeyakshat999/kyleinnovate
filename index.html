@@ -1,458 +1,685 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>KyleInnovate</title>
-<link rel="stylesheet" href="animation.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="style.css"/>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
-<!-- Font Google -->
-<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>KyleInnovate</title>
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animate.css" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css"
+    integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!-- Font Google -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg" id = "navbar">
+  <nav class="navbar navbar-expand-lg sticky-top">
     <div class="container">
-    <div class="col-md-4 col-sm-8">
-      <div class="nav-icon-container">
-        <a class="navbar-brand navbar-logo" href="#" onclick="reloadPage()">
-          <div class="nav-icon">
-              <img src="images/logoico.png" class="img-fluid"/>
-              <span class="nav-title">KyleInnovate</span>
-          </div>
+      <div class="nav-icon">
+        <a class="navbar-brand navbar-logo" href="#">
+          <img src="images/logoico.png" alt="logo" class="img-fluid" width="55">
+          <span class="nav-title">KyleInnovate</span>
         </a>
       </div>
-    </div>
-    <button class="navbar-toggler" type="button" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="toggleNavbar()"> <span class="fas fa-bars"></span> </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span
+          class="fas fa-bars"></span> </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item"> <a class="nav-link" id = "nav-section-0" href="#" onclick="scrollToSection('section-0', this)">Home</a> </li>
-            <li class="nav-item"> <a class="nav-link" id = "nav-section-1" href="#" onclick="scrollToSection('section-1', this)">Services</a> </li>
-            <li class="nav-item"> <a class="nav-link" id = "nav-section-2" href="#" onclick="scrollToSection('section-2', this)">Features</a> </li>
-            <li class="nav-item"> <a class="nav-link" id = "nav-section-3" href="#" onclick="scrollToSection('section-3', this)">Faq</a> </li>
-            <li class="nav-item"> <a class="nav-link" id = "nav-section-4" href="#" onclick="scrollToSection('section-4', this)">Team</a> </li>
-            <li class="nav-item"> <a class="nav-link" id = "nav-section-5" href="#" onclick="scrollToSection('section-5', this)">Testimonials</a> </li>
-            <li class="nav-item"> <a class="nav-link" id = "nav-section-6" href="#" onclick="scrollToSection('section-6', this)">About</a> </li>
-            <li class="nav-item"> <a class="nav-link" id = "nav-section-7" href="#" onclick="scrollToSection('section-7', this)">Contact</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="" data-scroll-nav="0">Home</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="1">Services</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="2">Features</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="3">Faq</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="4">About</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="5">Testimonials</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="6">Team</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#" data-scroll-nav="7">Contact</a> </li>
         </ul>
+      </div>
     </div>
-  </div>
-</nav>
-<!-- End Navbar --> 
+  </nav>
+  <!-- End Navbar -->
 
-<!-------Banner Start------->
-<section id="section-0">
-    <div class="blob-container">
-        <div class="blob">
-          <img src="images/blob.svg" .>
-        </div>
-            <h3 class="blob-title">KyleInnovate</h3>
-        <p class="blob-content">Tailored solutions for your success</p>
+  <!-- ======= Banner Section ======= -->
+  <section id="banner" class="banner d-flex align-items-center" data-scroll-index='0'>
 
-</div>
-  </section>
-<!---------Banner End--------->
-
-<!-------Service Start------->
-<section class="services bg-white" id = "section-1">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 service-text">
-          <div class="sectioner-header text-center">
-            <h3 class="purple">Services</h3>
-            
-            <p class="col-md-12">Our services section is a showcase of our diverse offerings tailored to meet the needs of modern businesses. We understand that each organization has unique requirements, which is why we offer a range of specialized services aimed at addressing various challenges and opportunities.</p>
+        <div class="col-lg-6 d-flex flex-column justify-content-center">
+          <h1 data-aos="fade-up">KyleInnovate</h1>
+          <h2 data-aos="fade-up" data-aos-delay="400">Tailored solutions for your success</h2>
+          <div data-aos="fade-up" data-aos-delay="600">
+            <div class="text-left text-lg-start">
+              <a href="#contact"
+                class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+                <span>Get Started</span>
+                <i class="fa fa-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 banner-img" data-aos="zoom-out" data-aos-delay="200">
+          <img src="images/banner-img.svg" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- Banner Hero -->
+
+
+  <!-------Service Start------->
+  <section class="services" data-scroll-index='1'>
+    <div class="container">
+      <div class="col-md-12 service-text py-5">
+        <div class="content px-xl-5 text-black">
+          <h2 class="text-center">What<strong> We Do</strong></h2>
+          <p>
+            Understanding the unique requirements of every organization, we offer a wide range of specialized services.
+            These are expertly crafted to address various challenges and capitalize on opportunities effectively,
+            ensuring tailored solutions for each client.
+          </p>
+        </div>
+      </div>
+      <div class="section-content text-center">
+        <div class="box-container">
+          <div class="box-wrap">
+            <div class="box">
+              <div class="media-left icon-border"><span class="service-icon" aria-hidden="true">&#127760;</span></div>
+              <div class="media-body text-center media-right-margin">
+                <h5 class="service-title">Website Development</h5>
+                <p class="col-sm-12">We design and develop stunning websites that drive results for your business.</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="media-right icon-border"><span class="service-icon" aria-hidden="true">&#128187;</span></div>
+              <div class="media-body text-center media-right-margin">
+                <h5 class="service-title">Custom Software Development</h5>
+                <p class="col-sm-12">We create tailored software solutions to meet your unique business needs.</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="media-right icon-border"> <span class="service-icon" aria-hidden="true">&#128373;</span>
+              </div>
+              <div class="media-body text-center media-right-margin">
+                <h5 class="service-title">Cyber Security Solutions</h5>
+                <p class="service-description">We offer cutting-edge technologies, best practices and comprehensive
+                  solutions to safeguard your digital assets against cyber threats.</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="media-right icon-border"> <span class="service-icon" aria-hidden="true">📊</span></div>
+              <div class="media-body text-center media-right-margin">
+                <h5 class="service-title">Digital Marketing</h5>
+                <p class="service-description">In today's market, a strong digital strategy is essential. Our solutions
+                  boost brand presence, drive traffic, and engage audiences effectively</p>
+              </div>
+            </div>
+            <div class="box">
+              <div class="media-right icon-border"> <span class="service-icon" aria-hidden="true">&#128203;</span>
+              </div>
+              <div class="media-body text-center media-right-margin">
+                <h5 class="service-title">Data Analysis Reports And Visualization Dashboards</h5>
+                <p class="service-description">Unlock business potential with our data analysis reports & visualization
+                  dashboards. Make informed decisions & drive growth with data-driven strategies.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-          <div class="section-content text-center">
-              <div class="box-container">
-              <div class="box-wrap">
-                <div class="box">
-                    <div class="media-left icon-border"><span class="service-icon" aria-hidden="true">&#127760;</span></div>
-                      <div class="media-body text-center media-right-margin">
-                        <h5 class="service-title">Website Development</h5>
-                        <p class="col-sm-12">We design and develop stunning websites that drive results for your business.</p>
-                      </div>
-                </div>
-                <div class="box">
-                  <div class="media-right icon-border"><span class="service-icon" aria-hidden="true">&#128187;</span></div>
-                  <div class="media-body text-center media-right-margin">
-                    <h5 class="service-title">Custom Software Development</h5>
-                    <p class="col-sm-12">We create tailored software solutions to meet your unique business needs.</p>
-                  </div>
-                </div>
-                <div class="box">
-                  <div class="media-right icon-border"> <span class="service-icon" aria-hidden="true">&#128373;</span> </div>
-                  <div class="media-body text-center media-right-margin">
-                    <h5 class="service-title">Cyber Security Solutions</h5>
-                    <p class="service-description">We offer cutting-edge technologies, best practices and comprehensive solutions to safeguard your digital assets against cyber threats.</p>
-                  </div>
-              </div>
-                <div class="box">
-                  <div class="media-right icon-border"> <span class="service-icon" aria-hidden="true">📊</span></div>
-                  <div class="media-body text-center media-right-margin">
-                    <h5 class="service-title">Digital Marketing</h5>
-                    <p class="service-description">In today's market, a strong digital strategy is essential. Our solutions boost brand presence, drive traffic, and engage audiences effectively</p>
-                  </div>
-                </div>
-                <div class="box">
-                  <div class="media-right icon-border"> <span class="service-icon" aria-hidden="true">&#128203;</span> </div>
-                  <div class="media-body text-center media-right-margin">
-                    <h5 class="service-title">Data Analysis Reports And Visualization Dashboards</h5>
-                    <p class="service-description">Unlock business potential with our data analysis reports & visualization dashboards. Make informed decisions & drive growth with data-driven strategies.</p>
-                  </div>
-                </div>
-            </div>
-            </div>
-        </div>
-  </div>
+    </div>
   </section>
-<!-------Service End-------> 
+  <!-------Service End------->
+
 
   <!-------Features Start------->
-<section class="features bg-lightblack" id="section-2">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 feature-text">
-          <div class="sectioner-header text-center">
-            <h3 class="gold">Features</h3>
-            
-            <p class="col-md-12 white">Below are the features we provide, embodying our dedication to innovation, dependability, and client contentment, persistently adapting to fulfill the ever-changing demands of contemporary enterprises.</p>
-          </div>
+  <section id="features" class="features" data-scroll-index='2'>
+    <div class="container" data-aos="fade-up">
+      <div class="col-md-12 service-text py-5">
+        <div class="content px-xl-5 text-white">
+          <h2 class="text-center">Why<strong> Us</strong></h2>
+          <p>
+            Discover a suite of features that epitomize our unwavering dedication to innovation, reliability, and
+            ensuring our clients' contentment. With an unyielding commitment to adapting to the dynamic needs of modern
+            enterprises
+          </p>
         </div>
       </div>
-          <div class="section-content text-center">
-            <div class="box-container">
-              <div class="box-wrap">
-              <div class="box-black">
-                  <div class="media-left text-center media-right-margin"> <span class="feature-icon" aria-hidden="true">&#128336;</span> </div>
-                  <div class="media-body text-left">
-                    <h5 class="feature-title">24/7 Customer Support</h5>
-                    <p class="feature-description">Our team offers 24/7 assistance for any technical issues or questions you may have. Count on our friendly support staff to be there for you, ensuring your satisfaction and success around the clock.</p>
-                  </div>
-                </div>
-                <div class="box-black">
-                  <div class="media-left text-center media-right-margin"> <span class="feature-icon" aria-hidden="true">&#x1F91D;</span> </div>
-                  <div class="media-body text-left">
-                    <h5 class="feature-title">Consulting and Advisory</h5>
-                    <p class="feature-description">Offering strategic guidance, technical expertise, and industry insights to help businesses align technology solutions with their goals and objectives.</p>
-                  </div>
-                </div>
-                <div class="box-black">
-                  <div class="media-left text-center media-right-margin"> <span class="feature-icon" aria-hidden="true">&#x1F6E0;</span> </div>
-                  <div class="media-body text-left">
-                    <h5 class="feature-title">Continuous Monitoring and Maintenance</h5>
-                    <p class="feature-description">Proactive monitoring of software systems and infrastructure to identify and resolve issues before they impact operations. Regular maintenance ensures optimal performance and reliability.</p>
-                  </div>
-                </div>
-              <div class="box-black">
-                  <div class="media-left text-center media-right-margin"> <span class="feature-icon" aria-hidden="true">🔗</span> </div>
-                  <div class="media-body text-left">
-                    <h5 class="feature-title">Customization and Integration</h5>
-                    <p class="feature-description">Customization of software solutions to align with specific business requirements and integration with existing systems or third-party applications to streamline workflows and enhance efficiency.</p>
-                  </div>
-                </div>
-                <div class="box-black">
-                  <div class="media-left text-center media-right-margin"> <span class="feature-icon" aria-hidden="true">&#x26D1;</span> </div>
-                  <div class="media-body text-left">
-                    <h5 class="feature-title">Emergency Response</h5>
-                    <p class="feature-description">Rapid response to critical issues or emergencies, providing immediate assistance and resolution to minimize downtime and mitigate risks.</p>
-                  </div>
-                </div>
-                <div class="box-black">
-                  <div class="media-left icon-border media-right-margin"> <span class="feature-icon" aria-hidden="true">$</span> </div>
-                  <div class="media-body text-left">
-                    <h5 class="feature-title">Save Money</h5>
-                    <p class="feature-description">We specialize in delivering top-tier technological solutions at exceptionally competitive rates, ensuring exceptional value. Streamlined processes, innovation, and quality without compromise. Tailored for startups and enterprises.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+
+      <div class="row gy-4 py-4" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="col-lg-4 col-md-6 my-4">
+          <div class="feature-item  position-relative">
+            <div class="text-center"> <span class="feature-icon" aria-hidden="true">&#128336;</span> </div>
+            <h3 class="feature-title">24/7 Customer Support</h3>
+            <p class="feature-description">Our team offers 24/7 assistance for any technical issues or questions you may
+              have. Count on our friendly support staff to be there for you, ensuring your satisfaction and success
+              around the clock.</p>
           </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 my-4">
+          <div class="feature-item position-relative">
+            <div class="text-center"> <span class="feature-icon" aria-hidden="true">&#x1F91D;</span> </div>
+            <h3 class="feature-title">Consulting and Advisory</h3>
+            <p class="feature-description">Offering strategic guidance, technical expertise, and industry insights to
+              help businesses align technology solutions with their goals and objectives.</p>
           </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 my-4">
+          <div class="feature-item position-relative">
+            <div class="text-center"> <span class="feature-icon" aria-hidden="true">&#x1F6E0;</span> </div>
+            <h3 class="feature-title">Continuous Monitoring and Maintenance</h3>
+            <p class="feature-description">Proactive monitoring of software systems and infrastructure to identify and
+              resolve issues before they impact operations. Regular maintenance ensures optimal performance and
+              reliability.</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 my-4">
+          <div class="feature-item position-relative">
+            <div class="text-center"> <span class="feature-icon" aria-hidden="true">🔗</span> </div>
+            <h3 class="feature-title">Customization and Integration</h3>
+            <p class="feature-description">Customization of software solutions to align with specific business
+              requirements and integration with existing systems or third-party applications to streamline workflows and
+              enhance efficiency.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-4">
+          <div class="feature-item position-relative">
+            <div class="text-center"> <span class="feature-icon" aria-hidden="true">&#x26D1;</span> </div>
+            <h3 class="feature-title">Emergency Response</h3>
+            <p class="feature-description">Rapid response to critical issues or emergencies, providing immediate
+              assistance and resolution to minimize downtime and mitigate risks.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 my-4">
+          <div class="feature-item position-relative">
+            <div class="text-center"> <span class="feature-icon" aria-hidden="true">&#8377;</span> </div>
+            <h3 class="feature-title">Save Money</h3>
+            <p class="feature-description">Delivering top-tier tech solutions at at exceptionally competitive rates, we
+              ensure exceptional value. Our focus on quality and affordability, along with streamlined processes and
+              innovative approaches, offers cost-effective options without compromise.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
   </section>
+
   <!-------Features End------->
 
-<!-------FAQ Start------->
-<section class="faq bg-white" id="section-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 faq-text">
-          <div class="sectioner-header text-center">
-            <h3 class="black">Frequently Asked Questions</h3>
-            
-            <p>There are several commonly asked questions that are popular among users, and here are some questions.</p>
-          </div>
-        </div>
-      </div>
-      <br />
-      <br />
-          <div class="section-content">
-            <div class="box-container-faq">
-                <div class="faq-items">
-                <div class="faq-content">
-                    <div class="faq-item">
-                        <input id="q1" type="checkbox" class="faq-toggle">
-                        <div class="faq-expand">+</div>
-                        <label for="q1" class="faq-question">Do you offer ongoing support and maintenance for software solutions?</label>
-                        <div class="faq-description">Yes, we provide ongoing support and maintenance services to ensure that your software solutions continue to run smoothly and efficiently. Our support team is available to address any issues, implement updates, and provide technical assistance as needed.</div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <input id="q2" type="checkbox" class="faq-toggle">
-                    <div class="faq-expand">+</div>
-                    <label for="q2" class="faq-question">How can I request a quote for your services?</label>
-                    <div class="faq-description">You can request a quote by filling out the contact form on our website or by reaching out to us via email or phone. We'll get back to you promptly with a personalized quote based on your specific requirements.</div>
-                </div>
-                <div class="faq-item">
-                    <input id="q3" type="checkbox" class="faq-toggle">
-                    <div class="faq-expand">+</div>
-                    <label for="q3" class="faq-question">What technologies and frameworks do you work with?</label>
-                    <div class="faq-description">We work with a wide range of technologies and frameworks including but not limited to Python, JavaScript, Bootstrap, SQL(Postgresql, MytSql, Clickhouse), NoSQL(MongoDB, Redis), PowerBi and Specialized in Cyber Security(Network Security, Cloud Security, Android Security). Our team stays updated with the latest trends and technologies to deliver cutting-edge solutions.</div>
-                </div>
-                <div class="faq-item">
-                    <input id="q4" type="checkbox" class="faq-toggle">
-                    <div class="faq-expand">+</div>
-                    <label for="q4" class="faq-question">How can I get in touch with your team for further inquiries?</label>
-                    <div class="faq-description">You can request a quote by filling out the contact form on our website or by reaching out to us via email or phone. We'll get back to you promptly with a personalized quote based on your specific requirements.</div>
-                </div>
-                <div class="faq-item">
-                    <input id="q5" type="checkbox" class="faq-toggle">
-                    <div class="faq-expand">+</div>
-                    <label for="q5" class="faq-question">What sets your company apart from others in the industry?</label>
-                    <div class="faq-description">Our company is committed to delivering high-quality solutions that exceed client expectations. We prioritize customer satisfaction, innovation, and transparency in all our projects. Our team of skilled professionals brings a wealth of experience and expertise to every project, ensuring successful outcomes and long-term partnerships.</div>
-                </div>
-            </div>
-        </div>
-          </div>
-          </div>
-  </section>
-    
-    <!-------FAQ End------->
+  <!-------FAQ Start------->
+  <section id="faq" class="faq" data-scroll-index='3'>
+    <div class="container" data-aos="fade-up">
 
-<!-------Team Start------->
-<section class="team bg-lightcyan" id="section-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 team-text">
-          <div class="sectioner-header text-center">
-            <h3 class="black">Our Team</h3>
-            
-            <p class="col-md-12 black">Our team is a dedicated group of professionals committed to delivering exceptional results. With diverse backgrounds and expertise in various domains, we collaborate closely to tackle challenges, drive innovation, and exceed client expectations. Fueled by passion, creativity, and a shared vision for success, we take pride in our collective achievements and strive to continuously learn and grow. Together, we are more than just a team – we are a cohesive unit working towards a common goal of delivering value and making a positive impact.</p>
+      <div class="row gy-4">
+
+        <div class="col-lg-4">
+          <div class="content px-xl-5">
+            <h3>Frequently Asked <strong>Questions</strong></h3>
+            <p>
+              There are several commonly asked questions that are popular among users, and here are some questions
+            </p>
           </div>
         </div>
-      </div>
-          <div class="section-content">
-            <div class="row our-team-container">
-                <div class="col-md-4 col-sm-6">
-                    <div class="our-team">
-                        <div class="team-image">
-                            <img src="images/user2.jpg">
-                            <p class="description">
-                                More Than 2 yrs experience in UX/UI design, crafting intuitive interfaces & enhancing user experiences. Skilled in wireframing, prototyping & user testing.
-                            </p>
-                            <ul class="social">
-                                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="team-info">
-                            <h3 class="title">Ankit Singhal</h3>
-                            <span class="post">UX/UI Developer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="our-team">
-                        <div class="team-image">
-                            <img src="images/user3.jpg">
-                            <p class="description">
-                                More Than 2 yrs experience in cybersecurity, specializing in cloud and network security, threat detection, & incident response, providing tailored consultancy services.
-                            </p>
-                            <ul class="social">
-                              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                              <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="team-info">
-                            <h3 class="title">Akshat Singhal</h3>
-                            <span class="post">CEO & Founder<br />(Cyber Security Expert)</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="our-team">
-                        <div class="team-image">
-                            <img src="images/user2.jpg">
-                            <p class="description">
-                                More Than 8 yrs of experienced backend developer. Proficient in Node JS, databases, and RESTful APIs.
-                            </p>
-                            <ul class="social">
-                              <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-                              <li><a href="#"><i class="fas fa-envelope"></i></a></li>
-                            </ul>
-                        </div>
-                        <div class="team-info">
-                            <h3 class="title">Ashish</h3>
-                            <span class="post">Backend Developer</span>
-                        </div>
-                    </div>
-                </div>
+
+        <div class="col-lg-8">
+
+          <div class="faq faq-flush" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="faq-item">
+              <input id="q1" type="checkbox" class="faq-toggle">
+              <div class="faq-expand">+</div>
+              <label for="q1" class="faq-question">Do you offer ongoing support and maintenance for software
+                solutions?</label>
+
+              <div class="faq-body">
+                Yes, we provide ongoing support and maintenance services to ensure that your software solutions continue
+                to run smoothly and efficiently. Our support team is available to address any issues, implement updates,
+                and provide technical assistance as needed.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <input id="q2" type="checkbox" class="faq-toggle">
+              <div class="faq-expand">+</div>
+              <label for="q2" class="faq-question">How can I request a quote for your services?</label>
+
+              <div class="faq-body">
+                You can request a quote by filling out the contact form on our website or by reaching out to us via
+                email or phone. We'll get back to you promptly with a personalized quote based on your specific
+                requirements.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <input id="q3" type="checkbox" class="faq-toggle">
+              <div class="faq-expand">+</div>
+              <label for="q3" class="faq-question">What technologies and frameworks do you work with?</label>
+
+              <div class="faq-body">
+                We work with a wide range of technologies and frameworks including but not limited to Python, NodeJS,
+                JavaScript, Bootstrap, Jquery, SQL(Postgresql, MySql, Clickhouse), NoSQL(MongoDB, Redis), PowerBi,
+                Figma, Firebase and Specialized in Cyber Security(Network Security, Cloud Security, Android Security).
+                Our team stays updated with the latest trends and technologies to deliver cutting-edge solutions.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <input id="q4" type="checkbox" class="faq-toggle">
+              <div class="faq-expand">+</div>
+              <label for="q4" class="faq-question">How can I get in touch with your team for further inquiries?</label>
+
+              <div class="faq-body">
+                You can reach out to us via email, phone, or the contact form on our website. We're always available to
+                answer your questions, discuss your project requirements, and provide tailored solutions to meet your
+                business needs.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <input id="q5" type="checkbox" class="faq-toggle">
+              <div class="faq-expand">+</div>
+              <label for="q5" class="faq-question">What sets your company apart from others in the industry?</label>
+
+              <div class="faq-body">
+                Our company is committed to delivering high-quality solutions that exceed client expectations. We
+                prioritize customer satisfaction, innovation, and transparency in all our projects. Our team of skilled
+                professionals brings a wealth of experience and expertise to every project, ensuring successful outcomes
+                and long-term partnerships.
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
   </section>
-  
-  <!-------Team End-------> 
 
-<!-------Testimonial Start-------> 
-<section class="testimonial bg-white" id="section-5">
-  <div class="container">
-      <div class="sectioner-header text-center white">
-          <h3 class="purple">Testimonials</h3>
-          <p class="black">We would like to share some feedback we have received from our clients. Their input is invaluable to us, helping us understand their needs and improve our services.</p>
+  <!-------FAQ End------->
+
+  <!-------About Start------->
+  <section class="about" id="about" data-scroll-index="4">
+    <div class="container">
+      <div class="content px-xl-5 text-black">
+        <h2 class="text-center">About<strong> Us</strong></h2>
       </div>
       <br />
-      <div class="testimonial-slider">
-          <div class="testimonial-item">
-              <div class="testimonial-content row">
-                  <div class="testimonial-img col-md-4">
-                      <img src="images/user1.jpg" alt="Placeholder" />
-                      <p class="testimonial-title">Scarlet Jonson <span>(Digital Designer)</span></p>
-                  </div>
-                  <div class="testimonial-text">
-                      <p>Working with KyleInnovate was an absolute pleasure. Their team of experts went above and beyond to deliver a custom software solution that exceeded our expectations. From the initial consultation to the final delivery, they were attentive to our needs, responsive to our feedback, and committed to ensuring our satisfaction. The quality of their workmanship and attention to detail was evident throughout the entire process. We highly recommend KyleInnovate to anyone seeking reliable and innovative software solutions.</p>
-                  </div>
+      <div class="py-4">
+        <ul class="timeline">
+          <li>
+            <div class="timeline-image">
+              <h4>
+                The
+                <br />
+                Journey
+                <br />
+                Begains!
+              </h4>
+            </div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4>2024</h4>
+                <h4 class="subheading">Our Humble Beginnings</h4>
               </div>
-          </div>
-          <div class="testimonial-item">
-              <div class="testimonial-content row">
-                  <div class="testimonial-img col-md-4">
-                      <img src="images/user2.jpg" alt="Placeholder" />
-                      <p class="testimonial-title">John Michal <span>(Client)</span></p>
-                  </div>
-                  <div class="testimonial-text">
-                      <p>Their team's expertise and dedication exceeded our expectations. From initial consultation to final delivery, they ensured seamless communication and tailored solutions that perfectly met our needs. Highly recommended!</p>
-                  </div>
+              <div class="timeline-body">
+                <p class="text-muted">Our journey began with a simple yet powerful vision: to transform ideas into
+                  digital realities through technology. Since our inception, we've been on a mission to revolutionize
+                  the software development landscape by embracing the latest technologies and best practices.</p>
               </div>
-          </div>
-          <br />
-          <div class = "testimonial-slider-button-container">
-            <a class="testimonial-slider-button" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="testimonial-slider-button" onclick="plusSlides(1)">&#10095;</a>
-          </div>
+            </div>
+          </li>
+          <li>
+            <div class="timeline-image">
+              <h4>
+                Be The Part
+                <br />
+                Of Our
+                <br />
+                Story!
+              </h4>
+            </div>
+          </li>
+        </ul>
       </div>
-  </div>
-  <br />
-</section>
+    </div>
+  </section>
+  <!-------About End------->
+
+  <!-- Start Stats Counter Section -->
+  <section id="stats" class="stats-counter">
+    <div class="container" data-aos="fade-up">
+
+      <div class="row gy-4 align-items-center">
+
+        <div class="col-lg-6">
+          <img src="images/stats-img.svg" alt="" class="img-fluid">
+        </div>
+
+        <div class="col-lg-6">
+
+          <div class="stats-item d-flex align-items-center">
+            <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p><strong>Happy Clients</strong> and Endless Smiles</p>
+          </div><!-- End Stats Item -->
+
+          <div class="stats-item d-flex align-items-center">
+            <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p><strong>Projects</strong></p>
+          </div><!-- End Stats Item -->
+
+          <div class="stats-item d-flex align-items-center">
+            <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1"
+              class="purecounter"></span>
+            <p><strong>Hours Of Support</strong> with continuous feedback</p>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!-- End Stats Counter Section -->
 
 
-<!-------Testimonial End-------> 
-
-<!-------About Start------->
-
-<section class="about bg-lightgray" id="section-6">
+  <!-------Testimonial Start------->
+  <section class="testimonial" data-scroll-index='5'>
     <div class="container">
-    <div class="row about-text">
-      <div class="col-md-12">
-        <div class="sectioner-header text-center">
-          <h3 class="black">About</h3>
-          <span class="line"></span>
-          <p class="about-glowing">Innovate, Empower, Transform: Our vision is to pioneer technological advancements that revolutionize industries, empower businesses, and transform lives. We envision a future where cutting-edge software solutions drive unprecedented growth and efficiency. Through relentless innovation and unwavering dedication, we aim to be the catalyst for positive change, fostering a world where technology enhances every aspect of human endeavor. With a commitment to excellence and a passion for progress, we strive to redefine the boundaries of possibility, shaping a brighter tomorrow for our clients, partners, and communities.</p>
-      </div>
-    </div>
-  </div>
-  <br />
-  <div class="about-social-icons-container">
-    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:honeyakshat999@gmail.com"><i class="fas fa-envelope"></i></a>
-    <a href="tel:+917339754521"><i class="fa fa-mobile"></i></a>
-    <a href="https://www.google.com/maps/place/Jaipur,+Rajasthan/@26.8845944,75.1995933,10z" target="_blank"><i class="fa fa-map-marker-alt"></i></a>
-</div>
-
-</div>
-</section>
-<!-------About End-------> 
-
-<!-------Contact Start------->
-<section class="contact bg-white" id="section-7">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="text-center contactus-text">
-          <h3 class="purple">Contact Us</h3>
-          <span class="line"></span>
-          <p>Don't hesitate to reach out to us. We welcome your inquiries and are here to assist you. Feel free to contact us at any time, and we'll be happy to provide the support and information you need.</p>
+      <div class="col-md-12 service-text py-5">
+        <div class="content px-xl-5 text-black">
+          <h2 class="text-center">What Clients<strong> Say</strong></h2>
+          <p>
+            Allow us to offer insights from our esteemed clients. Their feedback is a cornerstone, guiding us to refine
+            our services and cater to their evolving needs impeccably.
+          </p>
         </div>
-        <br />
-        <div class="section-content">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-8 mx-auto">
-                <form id="contact_form" action="https://formspree.io/f/xnqeorvz" method="post">
-                  <div class="row">
-                    <div class="col">
-                      <label for="fullname">Full Name</label>
-                      <input type="text" id="fullname" class="form-input w-100 rounded" name="full-name" required>
-                    </div>
-                    <div class="col">
-                      <label for="email">Email</label>
-                      <input type="email" id="email" class="form-input w-100 rounded" name="email" required>
+      </div>
+      <div class="row py-4">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Carousel indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+          </ol>
+          <!-- Wrapper for carousel items -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="media row">
+                    <div class="col-md-3">
+                    <img src="images/client1.jpg" class="mr-3" alt="">
+                  </div>
+                    <div class="media-body col-md-12">
+                      <div class="testimonial-item">
+                        <p>Their team's expertise and dedication exceeded our expectations. From initial consultation to
+                          final delivery, they ensured seamless communication and tailored solutions that perfectly met
+                          our needs. Highly recommended!</p>
+                        <p class="overview"><b>Praveen Anand</b> (Client)</p>
+                      </div>
                     </div>
                   </div>
-                  <div class="row">
-                    <div class="col">
-                      <label for="subject">Subject</label>
-                      <select class="form-control rounded" id="subject" required>
-                        <option value="enquiry" selected>Enquiry</option>
-                        <option value="feedback">Feedback</option>
-                        <option value="support">Support</option>
-                        <option value="emergency">Emergency Support</option>
-                        <option value="request">Request</option>
-                        <option value="service">Service</option>
-                        <option value="other">Other</option>
-                      </select>
-                    </div>
-                  </div>
-                  <br />
-                  <div class="row">
-                    <div class="col">
-                      <label for="message">Message</label>
-                      <textarea class="form-input-textarea w-100 rounded" id="message" name="message" required></textarea>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <button class="form-input-submit" type="submit" name="button">Submit</button>
-                    </div>
-                  </div>
-                </form>
+                </div>
               </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="media row">
+                    <div class="col-md-3">
+                    <img src="images/client2.jpg" class="mr-3" alt="">
+                  </div>
+                    <div class="media-body col-md-12">
+                      <div class="testimonial-item">
+                        <p>I recently worked with them on a software project and am delighted with the results. Their
+                          team showed professionalism, creativity, and a deep understanding of our needs from start to
+                          finish. They were attentive, providing timely updates at every step.</p>
+                        <p class="overview"><b>Abhishek Kumar</b> (Client)</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-------Contact End-------> 
+    <br />
+  </section>
 
-<!------Footer Start----->
-<footer class="footer-copy" id = "footer">
-  <div class="container-fluid">
-    <div class="row">
-    <div class="col-md-12">
-      <p>2024 &copy; KyleInnovate.</p>
-      <p>Website Designed With ❤️ By <a href="#" target="_self" rel="dofollow" onclick="reloadPage()">KyleInnovate</a></p>
+  <!-------Testimonial End------->
+
+
+
+  <!-------Team Start------->
+  <section class="team" data-scroll-index='6'>
+    <div class="container">
+      <div class="col-md-12 service-text py-5">
+        <div class="content px-xl-5 text-black">
+          <h2 class="text-center">Our Amazing<strong> Team</strong></h2>
+          <p>
+            A dedicated group of professionals committed to delivering exceptional results. With diverse backgrounds and
+            expertise in various domains, we collaborate closely to tackle challenges, drive innovation, and exceed
+            client expectations. Fueled by passion, creativity, and a shared vision for success, we take pride in our
+            collective achievements and strive to continuously learn and grow. Together, we are more than just a team -
+            we are a cohesive unit working towards a common goal of delivering value and making a positive impact.
+          </p>
+        </div>
+      </div>
+      <div class="section-content">
+        <div class="row our-team-container">
+          <div class="col-md-4 col-sm-6">
+            <div class="our-team">
+              <div class="team-image">
+                <img src="images/user2.jpg">
+                <p class="description">
+                  More Than 2 yrs experience in UX/UI design, crafting intuitive interfaces & enhancing user
+                  experiences. Skilled in wireframing, prototyping & user testing.
+                </p>
+                <ul class="social">
+                  <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                </ul>
+              </div>
+              <div class="team-info">
+                <h3 class="title">Ankit Singhal</h3>
+                <span class="post">UX/UI Developer</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="our-team">
+              <div class="team-image">
+                <img src="images/user3.jpg">
+                <p class="description">
+                  More Than 2 yrs experience in cybersecurity, specializing in cloud and network security, threat
+                  detection, & incident response, providing tailored consultancy services.
+                </p>
+                <ul class="social">
+                  <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                </ul>
+              </div>
+              <div class="team-info">
+                <h3 class="title">Akshat Singhal</h3>
+                <span class="post">CEO & Founder<br />(Cyber Security Expert)</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="our-team">
+              <div class="team-image">
+                <img src="images/user2.jpg">
+                <p class="description">
+                  More Than 8 yrs of experienced backend developer. Proficient in Node JS, databases, and RESTful APIs.
+                </p>
+                <ul class="social">
+                  <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                  <li><a href="#"><i class="fas fa-envelope"></i></a></li>
+                </ul>
+              </div>
+              <div class="team-info">
+                <h3 class="title">Ashish</h3>
+                <span class="post">Backend Developer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
-</footer>
-<!-------Footer End----->
+  </section>
 
+  <!-------Team End------->
 
-<script src="scroll.js"></script>
+  <!-- Start Contact Section -->
+  <section id="contact" class="contact" data-scroll-index='7'>
+
+    <div class="container" data-aos="fade-up">
+      <div class="content px-xl-5 text-black">
+        <h2 class="text-center">Contact<strong> Us</strong></h2>
+        <p>
+          Don't hesitate to reach out to us. We welcome your inquiries and are here to assist you. Feel free to contact
+          us at any time, and we'll be happy to provide the support and information you need.
+        </p>
+      </div>
+
+      <div class="row gy-4 py-4">
+
+        <div class="col-lg-6">
+
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <div class="info-box">
+                <a href="https://www.google.com/maps/place/Jaipur,+Rajasthan/@26.8845944,75.1995933,10z"
+                  target="_blank">
+                  <i class="fa fa-map-marker-alt"></i>
+                  <h3>Address</h3>
+                  <p>XXXX DurgaPura,<br>Jaipur, India 302018</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-box">
+                <a href="tel:+917339754521">
+                  <i class="fa fa-mobile"></i>
+                  <h3>Call Us</h3>
+                  <p>+91 7339754521</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-box">
+                <a href="mailto:honeyakshat999@gmail.com">
+                  <i class="fa fa-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>honeyakshat999@gmail.com</p>
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="info-box">
+                <i class="fa fa-clock media-left media-right-margin"></i>
+                <h3>Open Hours</h3>
+                <p>Monday - Friday<br>9:00AM - 6:00PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <form id="contact_form" action="https://formspree.io/f/xnqeorvz" method="post" class="contact-form">
+            <div class="row gy-4">
+
+              <div class="col-md-6 py-2">
+                <label for="Name">Full Name</label>
+                <input type="text" name="name" class="form-control" required>
+              </div>
+
+              <div class="col-md-6 py-2">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" required>
+              </div>
+
+              <div class="col-md-12 py-2">
+                <div class="row">
+                  <div class="col">
+                    <label for="subject">Subject</label>
+                    <select class="form-control rounded" id="subject" required>
+                      <option value="enquiry" selected>Enquiry</option>
+                      <option value="feedback">Feedback</option>
+                      <option value="support">Support</option>
+                      <option value="emergency">Emergency Support</option>
+                      <option value="request">Request</option>
+                      <option value="service">Service</option>
+                      <option value="other">Other</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-12 py-2">
+                <label for="message">Message</label>
+                <textarea class="form-control" name="message" rows="6" required></textarea>
+              </div>
+
+              <div class="col-md-12 text-center">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                <button type="submit">Send Message</button>
+              </div>
+
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Footer Start----->
+  <footer class="footer py-4">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-4 text-lg-start">Copyright &copy; KyleInnovate 2024<br />Designed With ❤️ By <a href="#"
+            target="_self" rel="dofollow" onclick="reloadPage()">KyleInnovate</a></div>
+        <div class="col-lg-4 my-3 my-lg-0">
+          <a class="social btn btn-dark btn-social mx-2" href="#!" aria-label="Facebook"><i
+              class="fab fa-instagram"></i></a>
+          <a class="social btn btn-dark btn-social mx-2" href="#!" aria-label="LinkedIn"><i
+              class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+          <a class="link-dark margin-right" href="#!">Privacy Policy</a>
+          <a class="link-dark" href="#!">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End----->
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scrollIt.min.js"></script>
+  <script src="js/custom.js"></script>
+  <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">&#9650;</button>
 </body>
+
 </html>
